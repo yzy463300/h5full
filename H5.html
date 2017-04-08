@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+		var deviceWidth =  parseInt(window.screen.width);var deviceScale = deviceWidth/640;var ua = navigator.userAgent;if (/Android (\d+\.\d+)/.test(ua)){var version = parseFloat(RegExp.$1);if(version>2.3){document.write('<meta name="viewport" content="width=640,initial-scale='+deviceScale+', minimum-scale = '+deviceScale+', maximum-scale = '+deviceScale+', target-densitydpi=device-dpi">');}else{document.write('<meta name="viewport" content="width=640,initial-scale=0.75,maximum-scale=0.75,minimum-scale=0.75,target-densitydpi=device-dpi" />');}} else {document.write('<meta name="viewport" content="width=640, user-scalable=no">');}
+	</script>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<link rel="stylesheet" href="reset.css">
+</head>
+<style>
+	*{padding: 0;margin:0;}
+	.H5{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.item{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	p{width: 200px;height: 100px;background-color: #000;}
+	@-webkit-keyframes arrow_{
+		from{-webkit-transform:translate3d(0,30px,0);opacity: 0;}
+		to{-webkit-transform:translate3d(0,0,0);opacity: 1;}
+	}
+</style>
+<body>
+<div class="H5">
+	<div class="item"  style="background: orange;z-index: 1">
+		<h1>page1</h1>
+		<p class="part" data-delay="1000"></p>
+		<p class="part" data-delay="2000"></p>
+		<p class="part" data-delay="3000"></p>
+		<p class="part" data-delay="4000"></p>
+	</div>
+	<div class="item"  style="background: green"><h1>page2</h1></div>
+	<div class="item"  style="background: blue"><h1>page3</h1></div>
+	<div class="item"  style="background: pink"><h1>page4</h1></div>
+</div>
+	<script src='jquery-2.1.1.min.js'></script>
+	<script src='jquery.transition.js'></script>
+	<script src='H5.js'></script>
+	<script>
+		var h5 =  new H5($('.H5'),{
+			audio:'http://img.cntapp.com/h5/wangchuang/assets/bgm.mp3',
+			img:'http://img.cntapp.com/h5/dragon/assets/music.png',
+			useArrow: true,
+		})
+	</script>
+</body>
+</html>
