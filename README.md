@@ -1,5 +1,5 @@
 # Usage
-Manually download and link anime.min.js in your HTML:
+Manually download and link H5.js in your HTML:
 ```js
 <script src="H5.js"></script>
 ```
