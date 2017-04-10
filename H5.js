@@ -87,7 +87,6 @@
 			}
 		}
 	};
-	H5.prototype.
 	H5.prototype.initMuisc = function(option) {
 		if (option.audio) {
 			var autoplay = 'autoplay="autoplay"';
